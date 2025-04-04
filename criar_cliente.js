@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var Cliente_1 = require("./Cliente");
+var cli = new Cliente_1.Cliente();
+cli.id = 30;
+cli.nome = "Lucas";
+cli.cpf = "58854884943";
+cli.rg = "329239023";
+cli.endereco = "Rua Nova Esperança";
+cli.telefone = "73722822";
+cli.limite_credito = 8000;
+cli.email = "lucas@gmail.com";
+console.log(cli.cadastrar());
+console.log(cli);

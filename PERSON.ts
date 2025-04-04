@@ -1,14 +1,21 @@
-interface Person {
-    name: string;
-    idade: number;
-    email: string;
+export class Person{
+    id:number = 0;
+    endereco:string = "";
+    email:string = "";
+    telefone:string = "";
+
+    cadastrar():string {
+        let msg = "";
+        if(this.endereco != ""){
+            msg = "Dados Cadastrado";
+        }else{
+            msg = "Não cadastrou";
+        }
+
+        return msg;
+    }
 }
 
-const pessoa: Person={
-    name: "Maria dias",
-    email: "mariadias@gmal.com",
-    idade: 19
-}
-console.log(pessoa);
-console.log(`Nome: ${pessoa.name}`);
-console.log(`Idade: ${pessoa.idade}`);
+const ps = new Person();
+ps.endereco = "Rua Nova Esperança, 78";
+console.log(ps.cadastrar());
